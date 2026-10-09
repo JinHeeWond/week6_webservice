@@ -78,10 +78,19 @@ Windows에서는 `gradlew.bat bootRun`을 사용합니다. IntelliJ에서는 `Bo
 
 등록 화면에는 제목, 저자, 가격, 카테고리, ISBN 입력란과 등록 버튼, 목록으로 돌아가기 버튼이 있습니다. Form은 `POST /books`로 전송합니다.
 
-**스크린샷 추가 필요:** 실제 실행 화면을 캡처하여 아래 경로에 저장한 뒤 README에 이미지 링크를 추가합니다.
+### 등록 전 목록
 
-- `docs/screenshots/books-list.png`: 책을 등록한 후의 목록 화면
-- `docs/screenshots/books-form.png`: 등록 Form 화면
+![등록 전 책 목록](docs/screenshots/books-list-before.png)
+
+### 책 등록 Form
+
+![웹서개 책 입력 화면](docs/screenshots/books-form.png)
+
+### 등록 후 목록
+
+![웹서개 책이 추가된 목록](docs/screenshots/books-list.png)
+
+등록 Form에 입력한 제목 `웹서개`, 저자 `진희원`, 가격 `1000`, 카테고리 `전공`, ISBN `1000`이 등록 후 목록에 표시됩니다.
 
 ## 실행 흐름
 
@@ -127,10 +136,14 @@ HTML Form → POST /books → @ModelAttribute BookRequest
 4. 등록 후 `redirect:/books`를 반환하면 POST 다음에 GET이 실행되는 PRG 흐름이 만들어집니다.
 5. Controller, Service, Repository를 분리하면 HTTP 처리와 데이터 저장 책임을 나누고 Repository 인터페이스를 통해 구현을 교체할 수 있습니다.
 
+## Render 배포 설정
+
+`Dockerfile`로 JDK 17 환경에서 실행용 JAR을 빌드하고 실행합니다. `render.yaml`은 무료 Docker Web Service 설정입니다. Render에서 개인 GitHub 저장소의 `main` 브랜치를 연결하며, Health Check 경로는 `/books`입니다. 서버 포트는 Render의 `PORT` 환경변수를 사용하고 로컬 기본값은 8081입니다.
+
 ## 제출 전 남은 확인
 
-- [ ] 실제 목록·등록 화면 스크린샷을 README에 포함
-- [ ] Weekly Report 초안을 본인의 학습 경험에 맞게 검토
+- [x] 실제 목록·등록 화면 스크린샷을 README에 포함
+- [x] Weekly Report 작성
 - [ ] Render 배포 및 배포 URL 기입
 - [ ] 배포 환경에서 목록·등록·새로고침 확인
 - [ ] 최종 코드를 GitHub에 Push하고 원격 커밋 확인
