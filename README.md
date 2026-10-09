@@ -68,6 +68,7 @@ Windows에서는 `gradlew.bat bootRun`을 사용합니다. IntelliJ에서는 `Bo
 
 | HTTP Method | URL | 기능 | 결과 |
 | --- | --- | --- | --- |
+| GET | / | 시작 주소 | redirect:/books |
 | GET | /books | 전체 책 목록 조회 | books/list |
 | GET | /books/new | 책 등록 Form 조회 | books/form |
 | POST | /books | 책 등록 | redirect:/books |

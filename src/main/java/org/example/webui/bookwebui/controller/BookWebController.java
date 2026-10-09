@@ -17,6 +17,11 @@ public class BookWebController {
         this.bookService = bookService;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/books";
+    }
+
     @GetMapping("/books")
     public String list(Model model) {
         model.addAttribute("books", bookService.findAll());

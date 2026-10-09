@@ -25,6 +25,10 @@ class BookWebFlowTests {
 
     @Test
     void rendersPagesAndShowsRegisteredBook() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(status().is3xxRedirection())
+                .andExpect(redirectedUrl("/books"));
+
         mockMvc.perform(get("/books"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("books/list"))
