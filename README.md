@@ -122,7 +122,7 @@ HTML Form → POST /books → @ModelAttribute BookRequest
 - `BookWebUiApplicationTests`: Spring 애플리케이션 컨텍스트 시작 확인
 - `BookWebFlowTests`: 빈 목록 렌더링, 등록 Form 렌더링, 5개 필드 등록, 목록 redirect, 등록 데이터 출력, CSS 응답 확인
 
-브라우저에서는 등록 버튼 클릭, 등록 후 목록 표시, 새로고침 후 중복 등록 여부, 좁은 화면에서 표와 Form 표시를 직접 확인합니다. 자동 테스트는 Bootstrap CDN의 실제 다운로드나 브라우저 화면 모양을 검증하지 않습니다.
+배포 사이트에서 등록 버튼 클릭, 등록 후 목록 표시, 새로고침 후 중복 등록되지 않는 것을 확인했습니다. 좁은 화면에서 표와 Form 표시는 별도로 확인할 수 있습니다. 자동 테스트는 Bootstrap CDN의 실제 다운로드나 브라우저 화면 모양을 검증하지 않습니다.
 
 ## 이번 과제 키워드
 
@@ -144,8 +144,8 @@ HTML Form → POST /books → @ModelAttribute BookRequest
 
 - [x] 실제 목록·등록 화면 스크린샷을 README에 포함
 - [x] Weekly Report 작성
-- [ ] Render 배포 및 배포 URL 기입
-- [ ] 배포 환경에서 목록·등록·새로고침 확인
-- [ ] 최종 코드를 GitHub에 Push하고 원격 커밋 확인
+- [x] Render 배포 및 배포 URL 기입
+- [x] 배포 환경에서 목록·등록·새로고침 확인
+- [x] 최종 코드를 GitHub에 Push하고 원격 커밋 확인
 - [ ] LMS에 과제 저장소 URL과 Render URL 제출
 - [ ] 정답·해설을 포함한 Weekly Question 2문제 제출
