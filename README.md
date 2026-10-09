@@ -4,7 +4,7 @@ Spring Boot와 Thymeleaf로 구현한 메모리 기반 책 관리 웹 애플리�
 
 - 과제 저장소: https://github.com/2026-2-WebService/assign06-c01-22300743
 - 개인 저장소: https://github.com/JinHeeWond/week6_webservice
-- **Render 배포 URL: 배포 완료 후 입력 필요**
+- Render 배포 URL: https://week6-webservice-22300743.onrender.com/books
 - [Weekly Report](docs/weekly-report.md)
 
 ## 기술 및 데이터
