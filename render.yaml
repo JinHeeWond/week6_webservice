@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: week6-webservice-22300743
+    runtime: docker
+    plan: free
+    repo: https://github.com/JinHeeWond/week6_webservice
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /books
